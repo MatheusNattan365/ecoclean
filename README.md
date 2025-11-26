@@ -29,8 +29,37 @@ A modern, responsive landing page for a professional junk removal service, inspi
 
 ## Getting Started
 
+### Option 1: Direct Browser
 1. Open `index.html` in your web browser
 2. No build process required - it's ready to use!
+
+### Option 2: Docker (Recommended)
+Run the site locally using Docker:
+
+**Using Docker Compose (easiest):**
+```bash
+docker-compose up
+```
+Then open http://localhost:8080 in your browser.
+
+**Using Docker directly:**
+```bash
+# Build the image
+docker build -t eco-clean-landing .
+
+# Run the container
+docker run -d -p 8080:80 --name eco-clean-landing eco-clean-landing
+```
+
+To stop the container:
+```bash
+# With docker-compose
+docker-compose down
+
+# With docker directly
+docker stop eco-clean-landing
+docker rm eco-clean-landing
+```
 
 ## Customization
 
